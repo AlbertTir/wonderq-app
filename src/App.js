@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Producer from './Producer';
+import Consumer from './Consumer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-body">
+        <div className={`producer module-panel`}>
+          <p>Producer</p>
+          <p>What would you like to know?</p>
+          <Producer/>
+        </div>
+
+        <div className={`consumer module-panel`}>
+          <p>Consumer</p>
+          <p>Pick the items you want to work on.</p>
+          <Consumer/>
+        </div>
+      </div>
     </div>
   );
 }
